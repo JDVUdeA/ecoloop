@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECOLoop — Economía circular para productos de aseo</title>
+
+  <!-- SEO -->
+  <meta name="description" content="ECOLoop es el sistema de economía circular que conecta fabricantes, supermercados y consumidores mediante envases reutilizables inteligentes. Reduce residuos plásticos, emisiones de CO₂ y costos de fabricación.">
+  <meta name="keywords" content="economía circular, envases reutilizables, sostenibilidad, reciclaje inteligente, ECOLoop, productos de aseo, RVM, reverse vending machine, impacto ambiental, empresas sostenibles">
+  <meta name="author" content="ECOLoop">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ECOLoop — La nueva forma de comprar productos de aseo sin generar residuos">
+  <meta property="og:description" content="Un sistema circular de envases reutilizables que conecta fabricantes, supermercados y consumidores. Tecnología, sostenibilidad y confianza en un solo ciclo.">
+  <meta property="og:image" content="og-cover.jpg">
+  <meta property="og:url" content="https://www.ecoloop.com">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="ECOLoop">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ECOLoop — Economía circular para productos de aseo">
+  <meta name="twitter:description" content="Compra, usa, devuelve, repite. El ciclo que transforma la industria del aseo.">
+  <meta name="twitter:image" content="og-cover.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2355C44D'/%3E%3Cpath d='M20 32a12 12 0 0 1 20.5-8.5M44 32a12 12 0 0 1-20.5 8.5' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M38 21l3 3-4 1M26 43l-3-3 4-1' stroke='white' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip link para accesibilidad -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ============================================= -->
+  <!-- NAVBAR -->
+  <!-- ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a href="#inicio" class="navbar__logo" aria-label="ECOLoop, ir al inicio">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="36" height="36">
+            <circle cx="20" cy="20" r="19" fill="url(#logoGrad)"/>
+            <path d="M11 20a9 9 0 0 1 15.5-6.2M29 20a9 9 0 0 1-15.5 6.2" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <path d="M24.3 12.1l2.3 1.9-2.9 1M15.7 27.9l-2.3-1.9 2.9-1" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0" stop-color="#55C44D"/>
+                <stop offset="1" stop-color="#2F80ED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">ECO<span class="logo-text--accent">Loop</span></span>
+      </a>
+
+      <nav class="navbar__nav" id="primary-navigation" aria-label="Navegación principal">
+        <ul class="navbar__links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#estaciones">Estaciones</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#contacto" class="btn btn--primary btn--sm">Comenzar</a>
+        <button class="navbar__toggle" id="navToggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú de navegación">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================= -->
+    <!-- HERO -->
+    <!-- ============================================= -->
+    <section class="hero" id="inicio" aria-label="Presentación principal">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__container">
+
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow">Economía circular · Tecnología · Sostenibilidad</p>
+          <h1 class="hero__title">
+            La nueva forma de comprar <span class="text-gradient">productos de aseo</span> sin generar residuos.
+          </h1>
+          <p class="hero__subtitle">
+            ECOLoop conecta fabricantes, supermercados y consumidores en un ciclo inteligente de envases reutilizables: se compran, se usan, se devuelven y vuelven a nacer.
+          </p>
+          <div class="hero__actions">
+            <a href="#que-es" class="btn btn--primary btn--lg">
+              Conocer el sistema
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#como-funciona" class="btn btn--ghost btn--lg">
+              Cómo funciona
+            </a>
+          </div>
+
+          <div class="hero__trust" role="group" aria-label="Métricas de confianza">
+            <div><strong>12.500+</strong><span>Envases reutilizados</span></div>
+            <div><strong>28 t</strong><span>CO₂ reducido</span></div>
+            <div><strong>12</strong><span>Supermercados aliados</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="hero__illustration-wrap">
+            <!-- Ilustración: estación inteligente ECOLoop -->
+            <svg viewBox="0 0 560 620" class="hero__illustration" role="img" aria-label="Ilustración de una estación inteligente ECOLoop donde dos personas depositan envases reutilizables">
+              <defs>
+                <linearGradient id="stationBody" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ffffff"/>
+                  <stop offset="1" stop-color="#eef3f1"/>
+                </linearGradient>
+                <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#2F80ED"/>
+                  <stop offset="1" stop-color="#55C44D"/>
+                </linearGradient>
+                <radialGradient id="floorGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0" stop-color="#55C44D" stop-opacity="0.18"/>
+                  <stop offset="1" stop-color="#55C44D" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <ellipse cx="280" cy="560" rx="230" ry="30" fill="url(#floorGlow)"/>
+
+              <!-- Máquina RVM -->
+              <g>
+                <rect x="185" y="120" width="190" height="400" rx="26" fill="url(#stationBody)" stroke="#dfe6e2" stroke-width="2"/>
+                <rect x="205" y="150" width="150" height="110" rx="14" fill="url(#screenGrad)"/>
+                <circle class="pulse-dot" cx="280" cy="205" r="8" fill="#fff"/>
+                <path d="M262 205a18 18 0 0 1 30-13M298 205a18 18 0 0 1-30 13" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85"/>
+                <rect x="215" y="285" width="130" height="18" rx="9" fill="#F6F8FA"/>
+                <rect x="215" y="285" width="86" height="18" rx="9" fill="#55C44D"/>
+                <rect x="230" y="330" width="100" height="70" rx="12" fill="#F6F8FA" stroke="#dfe6e2" stroke-width="1.5"/>
+                <rect x="252" y="352" width="56" height="8" rx="4" fill="#c9d3ce"/>
+                <rect x="205" y="470" width="150" height="30" rx="8" fill="#F6F8FA"/>
+                <circle cx="220" cy="485" r="5" fill="#2F80ED"/>
+                <circle cx="240" cy="485" r="5" fill="#55C44D"/>
+              </g>
+
+              <!-- Persona 1 depositando envase -->
+              <g class="float-slow">
+                <circle cx="120" cy="330" r="26" fill="#2D3436"/>
+                <path d="M80 470c2-46 20-78 40-78s38 32 40 78" fill="#2F80ED"/>
+                <rect x="128" y="360" width="34" height="14" rx="7" fill="#55C44D" transform="rotate(-18 128 360)"/>
+              </g>
+
+              <!-- Persona 2 esperando -->
+              <g class="float-slower">
+                <circle cx="440" cy="340" r="24" fill="#2D3436"/>
+                <path d="M404 470c2-42 18-72 36-72s34 30 36 72" fill="#55C44D"/>
+              </g>
+
+              <!-- Envases flotando -->
+              <g class="float-slow">
+                <rect x="95" y="230" width="22" height="46" rx="8" fill="#2F80ED" opacity="0.9"/>
+              </g>
+              <g class="float-slower">
+                <rect x="430" y="250" width="20" height="42" rx="8" fill="#55C44D" opacity="0.9"/>
+              </g>
+            </svg>
+
+            <div class="floating-card floating-card--1" data-reveal>
+              <span class="floating-card__icon" aria-hidden="true">♻️</span>
+              <div>
+                <strong>45 t</strong>
+                <span>Plástico evitado</span>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card--2" data-reveal>
+              <span class="floating-card__icon" aria-hidden="true">⚡</span>
+              <div>
+                <strong>+9 usos</strong>
+                <span>Promedio por envase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#que-es" class="scroll-indicator" aria-label="Desplazarse hacia abajo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ¿QUÉ ES ECOLOOP? -->
+    <!-- ============================================= -->
+    <section class="section what-is" id="que-es" aria-labelledby="what-is-title">
+      <div class="container what-is__grid">
+        <div class="what-is__visual" data-reveal>
+          <svg viewBox="0 0 480 480" role="img" aria-label="Ilustración conceptual de reutilización circular de envases">
+            <defs>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#55C44D"/>
+                <stop offset="1" stop-color="#2F80ED"/>
+              </linearGradient>
+            </defs>
+            <circle cx="240" cy="240" r="200" fill="#F6F8FA"/>
+            <circle class="spin-slow" cx="240" cy="240" r="150" fill="none" stroke="url(#ringGrad)" stroke-width="3" stroke-dasharray="6 14" stroke-linecap="round"/>
+            <g transform="translate(240 240)">
+              <rect x="-24" y="-90" width="48" height="90" rx="16" fill="#2F80ED"/>
+              <rect x="-24" y="-90" width="48" height="26" rx="10" fill="#55C44D"/>
+              <path d="M-70 30a70 70 0 0 1 60-69" stroke="#55C44D" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M70 -30a70 70 0 0 1-60 69" stroke="#2F80ED" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M-16 -44l6 5-9 3M6 68l-6-5 9-3" stroke="#55C44D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="what-is__content" data-reveal>
+          <p class="eyebrow">¿Qué es ECOLoop?</p>
+          <h2 id="what-is-title">Un ciclo, no un desecho.</h2>
+          <p class="lead">
+            ECOLoop es la infraestructura que le falta a la industria del aseo: un sistema de economía circular donde los envases dejan de ser basura para convertirse en un recurso que vuelve a circular una y otra vez.
+          </p>
+          <p>
+            En lugar de fabricar, usar y desechar, fabricamos, usamos, recolectamos, higienizamos y volvemos a llenar. Cada envase puede completar decenas de ciclos antes de ser reciclado, multiplicando su vida útil y reduciendo drásticamente la huella ambiental de cada producto.
+          </p>
+          <ul class="check-list">
+            <li>Reduce la dependencia de plástico virgen.</li>
+            <li>Disminuye emisiones asociadas a la fabricación de envases nuevos.</li>
+            <li>Genera un incentivo económico real para el consumidor.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- CÓMO FUNCIONA -->
+    <!-- ============================================= -->
+    <section class="section timeline-section" id="como-funciona" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">El proceso</p>
+          <h2 id="how-title">Cómo funciona ECOLoop</h2>
+          <p class="lead">Seis pasos, un mismo envase, infinitas vidas.</p>
+        </div>
+
+        <ol class="timeline" data-reveal>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">🛒</span>
+            <h3>Comprar</h3>
+            <p>El consumidor adquiere su producto de aseo favorito en un supermercado aliado ECOLoop.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">🧴</span>
+            <h3>Usar</h3>
+            <p>Usa el producto con normalidad, sin cambiar ningún hábito de consumo.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">📍</span>
+            <h3>Devolver</h3>
+            <p>Lleva el envase vacío a una estación inteligente ECOLoop (RVM) cercana.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">🎁</span>
+            <h3>Recibir recompensas</h3>
+            <p>La máquina identifica el envase automáticamente y otorga puntos, descuentos o beneficios.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">🧼</span>
+            <h3>Lavado industrial</h3>
+            <p>El envase pasa por lavado, esterilización, inspección y control de calidad certificado.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__icon" aria-hidden="true">🔄</span>
+            <h3>Rellenado</h3>
+            <p>El fabricante rellena el envase, que regresa al supermercado listo para un nuevo ciclo.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- BENEFICIOS -->
+    <!-- ============================================= -->
+    <section class="section benefits" id="beneficios" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Beneficios</p>
+          <h2 id="benefits-title">Un sistema que beneficia a todos</h2>
+        </div>
+
+        <div class="benefits__grid">
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="#2F80ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" stroke="#2F80ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Para hogares</h3>
+            <p>Ahorra en cada recompra, reduce residuos en casa y forma parte activa del cambio ambiental sin esfuerzo adicional.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#55C44D" stroke-width="1.8"/><path d="M8 7V5a4 4 0 0 1 8 0v2" stroke="#55C44D" stroke-width="1.8"/></svg>
+            </div>
+            <h3>Para empresas</h3>
+            <p>Reduce costos de materia prima, cumple metas ESG y fortalece la marca frente a un consumidor cada vez más consciente.</p>
+          </article>
+
+          <article class="benefit-card" data-reveal>
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2F80ED" stroke-width="1.8"/><path d="M4 12a8 8 0 0 1 13.6-5.7M20 12a8 8 0 0 1-13.6 5.7" stroke="#55C44D" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Para el planeta</h3>
+            <p>Menos plástico virgen, menos emisiones de CO₂ y menor presión sobre los recursos naturales del planeta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- IMPACTO -->
+    <!-- ============================================= -->
+    <section class="section impact" id="impacto" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="section-heading section-heading--light" data-reveal>
+          <p class="eyebrow">Impacto real</p>
+          <h2 id="impact-title">Números que ya están cambiando la industria</h2>
+        </div>
+
+        <div class="impact__grid" role="list">
+          <div class="impact__stat" role="listitem" data-reveal>
+            <span class="impact__number" data-count="12500" data-suffix="">0</span>
+            <span class="impact__label">Envases reutilizados</span>
+          </div>
+          <div class="impact__stat" role="listitem" data-reveal>
+            <span class="impact__number" data-count="45" data-suffix=" t">0</span>
+            <span class="impact__label">Plástico evitado</span>
+          </div>
+          <div class="impact__stat" role="listitem" data-reveal>
+            <span class="impact__number" data-count="28" data-suffix=" t">0</span>
+            <span class="impact__label">CO₂ reducido</span>
+          </div>
+          <div class="impact__stat" role="listitem" data-reveal>
+            <span class="impact__number" data-count="12" data-suffix="">0</span>
+            <span class="impact__label">Supermercados aliados</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- PROPUESTA DE VALOR -->
+    <!-- ============================================= -->
+    <section class="section value-prop" id="propuesta" aria-labelledby="value-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Propuesta de valor</p>
+          <h2 id="value-title">Todo lo que necesita el ecosistema</h2>
+        </div>
+
+        <div class="value-prop__grid">
+          <article class="value-card" data-reveal>
+            <span class="value-card__icon" aria-hidden="true">♻️</span>
+            <h3>Economía circular</h3>
+            <p>Un modelo probado que sustituye el ciclo lineal por reutilización continua.</p>
+          </article>
+          <article class="value-card" data-reveal>
+            <span class="value-card__icon" aria-hidden="true">🏆</span>
+            <h3>Recompensas</h3>
+            <p>Puntos, descuentos y beneficios que incentivan la devolución constante.</p>
+          </article>
+          <article class="value-card" data-reveal>
+            <span class="value-card__icon" aria-hidden="true">🤖</span>
+            <h3>Tecnología inteligente</h3>
+            <p>Estaciones RVM que identifican, clasifican y registran cada envase al instante.</p>
+          </article>
+          <article class="value-card" data-reveal>
+            <span class="value-card__icon" aria-hidden="true">🚚</span>
+            <h3>Logística inversa</h3>
+            <p>Una red de recolección, lavado y redistribución optimizada de punta a punta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- CICLO ECOLOOP (diagrama circular) -->
+    <!-- ============================================= -->
+    <section class="section cycle" id="ciclo" aria-labelledby="cycle-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">El ciclo</p>
+          <h2 id="cycle-title">El ciclo ECOLoop</h2>
+          <p class="lead">Un mismo circuito, en constante movimiento.</p>
+        </div>
+
+        <div class="cycle__diagram" data-reveal role="img" aria-label="Diagrama circular: Fabricantes envían productos a Supermercados, Supermercados a Consumidores, Consumidores devuelven envases a Máquinas ECOLoop, las máquinas los envían a Centro de lavado, y el Centro de lavado regresa los envases limpios a Fabricantes, cerrando el ciclo.">
+          <svg viewBox="0 0 600 600" class="cycle__svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="cycleGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#55C44D"/>
+                <stop offset="1" stop-color="#2F80ED"/>
+              </linearGradient>
+            </defs>
+            <circle cx="300" cy="300" r="230" fill="none" stroke="#e3ebe6" stroke-width="2"/>
+            <circle class="spin-slow" cx="300" cy="300" r="230" fill="none" stroke="url(#cycleGrad)" stroke-width="3" stroke-dasharray="14 18" stroke-linecap="round"/>
+          </svg>
+
+          <div class="cycle__node" style="--pos: 0;">
+            <span class="cycle__icon" aria-hidden="true">🏭</span>
+            <strong>Fabricantes</strong>
+          </div>
+          <div class="cycle__node" style="--pos: 1;">
+            <span class="cycle__icon" aria-hidden="true">🏬</span>
+            <strong>Supermercados</strong>
+          </div>
+          <div class="cycle__node" style="--pos: 2;">
+            <span class="cycle__icon" aria-hidden="true">🧑‍🤝‍🧑</span>
+            <strong>Consumidores</strong>
+          </div>
+          <div class="cycle__node" style="--pos: 3;">
+            <span class="cycle__icon" aria-hidden="true">📍</span>
+            <strong>Máquinas ECOLoop</strong>
+          </div>
+          <div class="cycle__node" style="--pos: 4;">
+            <span class="cycle__icon" aria-hidden="true">🧼</span>
+            <strong>Centro de lavado</strong>
+          </div>
+
+          <div class="cycle__center">
+            <span>ECOLoop</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- MAPA / ESTACIONES -->
+    <!-- ============================================= -->
+    <section class="section stations" id="estaciones" aria-labelledby="stations-title">
+      <div class="container stations__grid">
+        <div class="stations__content" data-reveal>
+          <p class="eyebrow">Cobertura</p>
+          <h2 id="stations-title">Encuentra tu estación ECOLoop</h2>
+          <p class="lead">Estamos presentes en las principales ciudades de Colombia, con nuevas estaciones abriendo cada mes.</p>
+
+          <form class="station-search" role="search" aria-label="Buscador de estaciones ECOLoop">
+            <label for="station-input" class="visually-hidden">Buscar por ciudad o barrio</label>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#2D3436" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="#2D3436" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="station-input" name="station-input" placeholder="Busca tu ciudad o barrio...">
+            <button type="submit" class="btn btn--primary btn--sm">Buscar</button>
+          </form>
+
+          <ul class="stations__list">
+            <li><strong>Bogotá</strong><span>18 estaciones</span></li>
+            <li><strong>Medellín</strong><span>9 estaciones</span></li>
+            <li><strong>Cali</strong><span>6 estaciones</span></li>
+            <li><strong>Barranquilla</strong><span>4 estaciones</span></li>
+          </ul>
+        </div>
+
+        <div class="stations__map" data-reveal>
+          <svg viewBox="0 0 400 520" role="img" aria-label="Mapa estilizado de Colombia con puntos que representan estaciones ECOLoop">
+            <path d="M120 20 L200 10 L260 40 L290 90 L320 120 L310 170 L340 210 L330 260 L300 300 L310 350 L280 400 L250 460 L210 500 L170 470 L150 420 L110 400 L90 350 L60 320 L70 260 L50 210 L80 170 L70 120 L100 80 Z" fill="#EAF4EC" stroke="#c7ddcb" stroke-width="2"/>
+            <circle class="ping" cx="180" cy="140" r="7" fill="#55C44D"/>
+            <circle class="ping" cx="150" cy="240" r="7" fill="#2F80ED"/>
+            <circle class="ping" cx="200" cy="330" r="7" fill="#55C44D"/>
+            <circle class="ping" cx="120" cy="360" r="7" fill="#2F80ED"/>
+            <circle class="ping" cx="230" cy="410" r="7" fill="#55C44D"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- FAQ -->
+    <!-- ============================================= -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title">Resolvemos tus dudas</h2>
+        </div>
+
+        <div class="accordion" data-reveal>
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
+                ¿Cómo sé si un producto es compatible con ECOLoop?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+              <p>Todos los productos ECOLoop llevan un sello distintivo en el empaque y un código identificable por las estaciones inteligentes, disponibles en los supermercados aliados.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
+                ¿Qué recompensas puedo recibir?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+              <p>Puedes acumular puntos canjeables por descuentos, productos gratuitos o beneficios exclusivos con nuestros supermercados y marcas aliadas.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
+                ¿Cuántas veces se puede reutilizar un envase?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+              <p>En promedio, un envase ECOLoop puede completar entre 10 y 15 ciclos de reutilización antes de ser reciclado de forma responsable.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
+                ¿ECOLoop tiene algún costo para el consumidor?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+              <p>No. Devolver el envase es gratuito y, además, genera recompensas. El único requisito es hacerlo en una estación ECOLoop autorizada.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
+                ¿Cómo puede mi empresa unirse como fabricante o supermercado aliado?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-5-btn" hidden>
+              <p>Escríbenos a través del formulario de contacto y nuestro equipo comercial evaluará la mejor forma de integrar tu operación a la red ECOLoop.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- CONTACTO -->
+    <!-- ============================================= -->
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info" data-reveal>
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contact-title">Hablemos del futuro del aseo</h2>
+          <p class="lead">Inversionistas, fabricantes, supermercados o medios: cuéntanos en qué podemos ayudarte.</p>
+
+          <ul class="contact__details">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="#2F80ED" stroke-width="1.6"/><path d="M4 6l8 7 8-7" stroke="#2F80ED" stroke-width="1.6"/></svg>
+              <a href="mailto:hola@ecoloop.com">hola@ecoloop.com</a>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z" stroke="#2F80ED" stroke-width="1.6"/></svg>
+              <a href="tel:+576014567890">+57 601 456 7890</a>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z" stroke="#2F80ED" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#2F80ED" stroke-width="1.6"/></svg>
+              <span>Bogotá, Colombia</span>
+            </li>
+          </ul>
+
+          <div class="social-links" aria-label="Redes sociales de ECOLoop">
+            <a href="#" aria-label="ECOLoop en Instagram">IG</a>
+            <a href="#" aria-label="ECOLoop en LinkedIn">IN</a>
+            <a href="#" aria-label="ECOLoop en X (Twitter)">X</a>
+          </div>
+        </div>
+
+        <form class="contact__form" data-reveal aria-label="Formulario de contacto">
+          <div class="form-row">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="role">¿Cómo te identificas?</label>
+            <select id="role" name="role">
+              <option value="consumidor">Consumidor</option>
+              <option value="supermercado">Supermercado</option>
+              <option value="fabricante">Fabricante</option>
+              <option value="inversionista">Inversionista</option>
+              <option value="medio">Medio de comunicación</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="navbar__logo" aria-label="ECOLoop, ir al inicio">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="32" height="32">
+              <circle cx="20" cy="20" r="19" fill="url(#logoGradFooter)"/>
+              <path d="M11 20a9 9 0 0 1 15.5-6.2M29 20a9 9 0 0 1-15.5 6.2" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="logoGradFooter" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0" stop-color="#55C44D"/>
+                  <stop offset="1" stop-color="#2F80ED"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">ECO<span class="logo-text--accent">Loop</span></span>
+        </a>
+        <p>El ciclo que transforma la industria del aseo. Envases reutilizables, tecnología inteligente y un planeta con menos residuos.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Enlaces del sitio">
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__nav" aria-label="Enlaces legales">
+        <h3>Compañía</h3>
+        <ul>
+          <li><a href="#estaciones">Estaciones</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__newsletter">
+        <h3>Mantente informado</h3>
+        <p>Recibe novedades sobre nuevas estaciones y aliados.</p>
+        <form class="newsletter-form" aria-label="Suscripción al boletín">
+          <label for="newsletter-email" class="visually-hidden">Correo electrónico</label>
+          <input type="email" id="newsletter-email" placeholder="tu@correo.com" required>
+          <button type="submit" aria-label="Suscribirse">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 ECOLoop. Todos los derechos reservados.</p>
+      <p>Diseñado para un futuro sin residuos.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
