@@ -5,11 +5,10 @@
    2. Navbar: efecto de scroll
    3. Menú hamburguesa (móvil)
    4. Scroll reveal (aparición progresiva)
-   5. Contadores animados (sección Impacto)
-   6. Acordeón FAQ
-   7. Botón "Volver arriba"
-   8. Formularios (contacto, newsletter, buscador de estaciones)
-   9. Inicialización
+   5. Acordeón FAQ
+   6. Botón "Volver arriba"
+   7. Formularios (contacto, newsletter, notificación de estaciones)
+   8. Inicialización
    ============================================================= */
 
 (function () {
@@ -146,74 +145,7 @@
   }
 
   /* =============================================================
-     5. CONTADORES ANIMADOS (SECCIÓN IMPACTO)
-     ============================================================= */
-  function initCounters() {
-    const counters = document.querySelectorAll('.impact__number');
-    if (!counters.length) return;
-
-    const DURATION = 1800;
-
-    function animateCounter(el) {
-      const target = parseFloat(el.dataset.count) || 0;
-      const suffix = el.dataset.suffix || '';
-      const useThousands = target >= 1000;
-
-      if (prefersReducedMotion) {
-        el.textContent = formatNumber(target, useThousands) + suffix;
-        return;
-      }
-
-      const startTime = performance.now();
-
-      function easeOutExpo(t) {
-        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
-      }
-
-      function step(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / DURATION, 1);
-        const eased = easeOutExpo(progress);
-        const currentValue = Math.floor(eased * target);
-
-        el.textContent = formatNumber(currentValue, useThousands) + suffix;
-
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        } else {
-          el.textContent = formatNumber(target, useThousands) + suffix;
-        }
-      }
-
-      window.requestAnimationFrame(step);
-    }
-
-    function formatNumber(value, useThousands) {
-      return useThousands ? value.toLocaleString('es-CO') : String(value);
-    }
-
-    if (!('IntersectionObserver' in window)) {
-      counters.forEach(animateCounter);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    counters.forEach((counter) => observer.observe(counter));
-  }
-
-  /* =============================================================
-     6. ACORDEÓN FAQ
+     5. ACORDEÓN FAQ
      ============================================================= */
   function initAccordion() {
     const triggers = document.querySelectorAll('.accordion__trigger');
@@ -243,7 +175,7 @@
   }
 
   /* =============================================================
-     7. BOTÓN "VOLVER ARRIBA"
+     6. BOTÓN "VOLVER ARRIBA"
      ============================================================= */
   function initBackToTop() {
     const button = document.createElement('button');
@@ -310,12 +242,12 @@
   }
 
   /* =============================================================
-     8. FORMULARIOS (CONTACTO, NEWSLETTER, BUSCADOR DE ESTACIONES)
+     7. FORMULARIOS (CONTACTO, NEWSLETTER, NOTIFICACIÓN DE ESTACIONES)
      ============================================================= */
   function initForms() {
     handleFormSubmit('.contact__form', '¡Gracias! Tu mensaje fue enviado, te contactaremos pronto.');
     handleFormSubmit('.newsletter-form', '¡Listo! Te has suscrito a las novedades de ECOLoop.');
-    handleStationSearch();
+    handleFormSubmit('.station-search', '¡Gracias! Te avisaremos apenas ECOLoop llegue a tu zona.');
   }
 
   function handleFormSubmit(selector, successMessage) {
@@ -363,40 +295,13 @@
     }, 4000);
   }
 
-  function handleStationSearch() {
-    const form = document.querySelector('.station-search');
-    const input = document.getElementById('station-input');
-    const list = document.querySelector('.stations__list');
-    if (!form || !input || !list) return;
-
-    const items = Array.from(list.querySelectorAll('li'));
-
-    function filterStations() {
-      const query = input.value.trim().toLowerCase();
-      items.forEach((item) => {
-        const cityName = item.querySelector('strong');
-        const matches =
-          !query || (cityName && cityName.textContent.toLowerCase().includes(query));
-        item.style.display = matches ? '' : 'none';
-      });
-    }
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      filterStations();
-    });
-
-    input.addEventListener('input', throttle(filterStations, 150));
-  }
-
   /* =============================================================
-     9. INICIALIZACIÓN
+     8. INICIALIZACIÓN
      ============================================================= */
   onReady(() => {
     initNavbarScroll();
     initMobileMenu();
     initScrollReveal();
-    initCounters();
     initAccordion();
     initBackToTop();
     initForms();

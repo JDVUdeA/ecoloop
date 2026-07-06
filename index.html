@@ -26,7 +26,10 @@
   <meta name="twitter:image" content="og-cover.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2355C44D'/%3E%3Cpath d='M20 32a12 12 0 0 1 20.5-8.5M44 32a12 12 0 0 1-20.5 8.5' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M38 21l3 3-4 1M26 43l-3-3 4-1' stroke='white' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="shortcut icon" href="assets/favicon.ico">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,20 +50,7 @@
   <header class="navbar" id="navbar">
     <div class="navbar__container">
       <a href="#inicio" class="navbar__logo" aria-label="ECOLoop, ir al inicio">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="36" height="36">
-            <circle cx="20" cy="20" r="19" fill="url(#logoGrad)"/>
-            <path d="M11 20a9 9 0 0 1 15.5-6.2M29 20a9 9 0 0 1-15.5 6.2" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-            <path d="M24.3 12.1l2.3 1.9-2.9 1M15.7 27.9l-2.3-1.9 2.9-1" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
-                <stop offset="0" stop-color="#55C44D"/>
-                <stop offset="1" stop-color="#2F80ED"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
-        <span class="logo-text">ECO<span class="logo-text--accent">Loop</span></span>
+        <img src="assets/logo-ecoloop.png" alt="ECOLoop" class="logo-img" width="140" height="34">
       </a>
 
       <nav class="navbar__nav" id="primary-navigation" aria-label="Navegación principal">
@@ -94,16 +84,16 @@
       <div class="hero__container">
 
         <div class="hero__content" data-reveal>
-          <p class="eyebrow">Economía circular · Tecnología · Sostenibilidad</p>
+          <p class="eyebrow">Economía circular · Envases retornables · Tecnología RVM</p>
           <h1 class="hero__title">
-            La nueva forma de comprar <span class="text-gradient">productos de aseo</span> sin generar residuos.
+            Productos de aseo que <span class="text-gradient">no terminan en la basura</span>.
           </h1>
           <p class="hero__subtitle">
-            ECOLoop conecta fabricantes, supermercados y consumidores en un ciclo inteligente de envases reutilizables: se compran, se usan, se devuelven y vuelven a nacer.
+            ECOLoop conecta fabricantes, supermercados y hogares colombianos mediante un sistema de envases retornables: se compran, se usan, se devuelven en una estación inteligente y vuelven a circular.
           </p>
           <div class="hero__actions">
             <a href="#que-es" class="btn btn--primary btn--lg">
-              Conocer el sistema
+              Conocer el modelo
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="#como-funciona" class="btn btn--ghost btn--lg">
@@ -111,10 +101,10 @@
             </a>
           </div>
 
-          <div class="hero__trust" role="group" aria-label="Métricas de confianza">
-            <div><strong>12.500+</strong><span>Envases reutilizados</span></div>
-            <div><strong>28 t</strong><span>CO₂ reducido</span></div>
-            <div><strong>12</strong><span>Supermercados aliados</span></div>
+          <div class="hero__trust" role="group" aria-label="Pilares del sistema ECOLoop">
+            <div><strong>PEAD</strong><span>Envases de alta durabilidad certificados</span></div>
+            <div><strong>RVM</strong><span>Estaciones inteligentes de autoservicio</span></div>
+            <div><strong>Ahorro</strong><span>Descuento inmediato en tu próxima compra</span></div>
           </div>
         </div>
 
@@ -179,16 +169,16 @@
             <div class="floating-card floating-card--1" data-reveal>
               <span class="floating-card__icon" aria-hidden="true">♻️</span>
               <div>
-                <strong>45 t</strong>
-                <span>Plástico evitado</span>
+                <strong>Trazabilidad total</strong>
+                <span>Código único por envase</span>
               </div>
             </div>
 
             <div class="floating-card floating-card--2" data-reveal>
-              <span class="floating-card__icon" aria-hidden="true">⚡</span>
+              <span class="floating-card__icon" aria-hidden="true">🔁</span>
               <div>
-                <strong>+9 usos</strong>
-                <span>Promedio por envase</span>
+                <strong>Circuito cerrado</strong>
+                <span>Vuelve al mismo supermercado</span>
               </div>
             </div>
           </div>
@@ -216,11 +206,12 @@
             <circle cx="240" cy="240" r="200" fill="#F6F8FA"/>
             <circle class="spin-slow" cx="240" cy="240" r="150" fill="none" stroke="url(#ringGrad)" stroke-width="3" stroke-dasharray="6 14" stroke-linecap="round"/>
             <g transform="translate(240 240)">
+              <path d="M-92.0 0.0A92 92 0 0 1 64.5 -65.6" stroke="#55C44D" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M57.4 -61.2L73.8 -56.5L68.7 -72.7Z" fill="#55C44D"/>
+              <path d="M92.0 0.0A92 92 0 0 1 -64.5 65.6" stroke="#2F80ED" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M-57.4 61.2L-73.8 56.5L-68.7 72.7Z" fill="#2F80ED"/>
               <rect x="-24" y="-90" width="48" height="90" rx="16" fill="#2F80ED"/>
               <rect x="-24" y="-90" width="48" height="26" rx="10" fill="#55C44D"/>
-              <path d="M-70 30a70 70 0 0 1 60-69" stroke="#55C44D" stroke-width="6" fill="none" stroke-linecap="round"/>
-              <path d="M70 -30a70 70 0 0 1-60 69" stroke="#2F80ED" stroke-width="6" fill="none" stroke-linecap="round"/>
-              <path d="M-16 -44l6 5-9 3M6 68l-6-5 9-3" stroke="#55C44D" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
           </svg>
         </div>
@@ -256,34 +247,46 @@
 
         <ol class="timeline" data-reveal>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">🛒</span>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="20" r="1.4" stroke="#2F80ED" stroke-width="1.6"/><circle cx="17" cy="20" r="1.4" stroke="#2F80ED" stroke-width="1.6"/><path d="M2.5 3h2l2.2 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20 7H5.3" stroke="#2F80ED" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
             <h3>Comprar</h3>
-            <p>El consumidor adquiere su producto de aseo favorito en un supermercado aliado ECOLoop.</p>
+            <p>El hogar compra su producto de aseo de siempre, en un envase retornable, en el supermercado aliado habitual.</p>
           </li>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">🧴</span>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 2h6v3.5l1.6 2.4c.3.4.4.9.4 1.4V20a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9.3c0-.5.1-1 .4-1.4L9 5.5V2Z" stroke="#55C44D" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.3 13h9.4" stroke="#55C44D" stroke-width="1.6"/></svg>
+            </span>
             <h3>Usar</h3>
-            <p>Usa el producto con normalidad, sin cambiar ningún hábito de consumo.</p>
+            <p>Lo usa con total normalidad y, al terminarlo, retira la faja de cartón biodegradable que identifica la marca.</p>
           </li>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">📍</span>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z" stroke="#2F80ED" stroke-width="1.6"/><circle cx="12" cy="9" r="2.4" stroke="#2F80ED" stroke-width="1.6"/></svg>
+            </span>
             <h3>Devolver</h3>
-            <p>Lleva el envase vacío a una estación inteligente ECOLoop (RVM) cercana.</p>
+            <p>Lleva el envase vacío a la estación inteligente ECOLoop (RVM) del mismo supermercado donde lo compró.</p>
           </li>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">🎁</span>
-            <h3>Recibir recompensas</h3>
-            <p>La máquina identifica el envase automáticamente y otorga puntos, descuentos o beneficios.</p>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1a2 2 0 0 0 0 4v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 0 0-4v-1Z" stroke="#55C44D" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8v8" stroke="#55C44D" stroke-width="1.6" stroke-dasharray="1.6 2.2"/></svg>
+            </span>
+            <h3>Recibir el descuento</h3>
+            <p>La máquina valida el código único del envase y entrega un ticket de descuento para ese mismo producto.</p>
           </li>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">🧼</span>
-            <h3>Lavado industrial</h3>
-            <p>El envase pasa por lavado, esterilización, inspección y control de calidad certificado.</p>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 3h16M6 3v3.5L4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7l-2-5.5V3" stroke="#2F80ED" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 14h16" stroke="#2F80ED" stroke-width="1.6"/></svg>
+            </span>
+            <h3>Sanitización industrial</h3>
+            <p>El envase viaja a planta, donde se lava, se esteriliza en túnel UV y pasa control de calidad certificado.</p>
           </li>
           <li class="timeline__step">
-            <span class="timeline__icon" aria-hidden="true">🔄</span>
-            <h3>Rellenado</h3>
-            <p>El fabricante rellena el envase, que regresa al supermercado listo para un nuevo ciclo.</p>
+            <span class="timeline__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.6-5.7M20 12a8 8 0 0 1-13.6 5.7" stroke="#55C44D" stroke-width="1.8" stroke-linecap="round"/><path d="M16 4.8l1.6 1.5-2 .7M8 19.2l-1.6-1.5 2-.7" stroke="#55C44D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Rellenado y regreso</h3>
+            <p>El fabricante rellena el envase certificado, que vuelve al supermercado listo para un nuevo ciclo.</p>
           </li>
         </ol>
       </div>
@@ -305,23 +308,23 @@
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="#2F80ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9" stroke="#2F80ED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Para hogares</h3>
-            <p>Ahorra en cada recompra, reduce residuos en casa y forma parte activa del cambio ambiental sin esfuerzo adicional.</p>
+            <p>Compra el producto de siempre en un envase retornable. Al devolverlo en la estación RVM de tu supermercado, recibes un descuento inmediato en tu próxima compra.</p>
           </article>
 
           <article class="benefit-card" data-reveal>
             <div class="benefit-card__icon" aria-hidden="true">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#55C44D" stroke-width="1.8"/><path d="M8 7V5a4 4 0 0 1 8 0v2" stroke="#55C44D" stroke-width="1.8"/></svg>
             </div>
-            <h3>Para empresas</h3>
-            <p>Reduce costos de materia prima, cumple metas ESG y fortalece la marca frente a un consumidor cada vez más consciente.</p>
+            <h3>Para marcas de aseo</h3>
+            <p>Recolectamos, sanitizamos y certificamos tus envases retornables para que te enfoques en producir, sin invertir en infraestructura propia de lavado.</p>
           </article>
 
           <article class="benefit-card" data-reveal>
             <div class="benefit-card__icon" aria-hidden="true">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2F80ED" stroke-width="1.8"/><path d="M4 12a8 8 0 0 1 13.6-5.7M20 12a8 8 0 0 1-13.6 5.7" stroke="#55C44D" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 21V10l8-6 8 6v11" stroke="#2F80ED" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="#2F80ED" stroke-width="1.8" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Para el planeta</h3>
-            <p>Menos plástico virgen, menos emisiones de CO₂ y menor presión sobre los recursos naturales del planeta.</p>
+            <h3>Para supermercados aliados</h3>
+            <p>La estación ECOLoop atrae tráfico recurrente al punto de venta y refuerza la imagen del comercio ante un consumidor cada vez más consciente.</p>
           </article>
         </div>
       </div>
@@ -333,26 +336,39 @@
     <section class="section impact" id="impacto" aria-labelledby="impact-title">
       <div class="container">
         <div class="section-heading section-heading--light" data-reveal>
-          <p class="eyebrow">Impacto real</p>
-          <h2 id="impact-title">Números que ya están cambiando la industria</h2>
+          <p class="eyebrow">Cómo medimos el impacto</p>
+          <h2 id="impact-title">Los indicadores que guían la operación</h2>
+          <p class="lead">Un sistema de economía circular solo funciona si se mide. Estos son los indicadores con los que evaluamos cada estación y cada ciclo.</p>
         </div>
 
         <div class="impact__grid" role="list">
           <div class="impact__stat" role="listitem" data-reveal>
-            <span class="impact__number" data-count="12500" data-suffix="">0</span>
-            <span class="impact__label">Envases reutilizados</span>
+            <span class="impact__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.6-5.7M20 12a8 8 0 0 1-13.6 5.7" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="impact__label">Tasa de retorno de envases</span>
+            <span class="impact__desc">Porcentaje de envases que vuelven a la estación tras cada compra.</span>
           </div>
           <div class="impact__stat" role="listitem" data-reveal>
-            <span class="impact__number" data-count="45" data-suffix=" t">0</span>
-            <span class="impact__label">Plástico evitado</span>
+            <span class="impact__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#fff" stroke-width="1.8"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="impact__label">Usuarios activos</span>
+            <span class="impact__desc">Hogares que devuelven envases de forma recurrente cada mes.</span>
           </div>
           <div class="impact__stat" role="listitem" data-reveal>
-            <span class="impact__number" data-count="28" data-suffix=" t">0</span>
-            <span class="impact__label">CO₂ reducido</span>
+            <span class="impact__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M9 2h6v3.5l1.6 2.4c.3.4.4.9.4 1.4V20a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V9.3c0-.5.1-1 .4-1.4L9 5.5V2Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="impact__label">Ciclos promedio por envase</span>
+            <span class="impact__desc">Número de veces que un mismo envase vuelve a llenarse.</span>
           </div>
           <div class="impact__stat" role="listitem" data-reveal>
-            <span class="impact__number" data-count="12" data-suffix="">0</span>
-            <span class="impact__label">Supermercados aliados</span>
+            <span class="impact__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1a2 2 0 0 0 0 4v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 0 0-4v-1Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="impact__label">Descuentos redimidos</span>
+            <span class="impact__desc">Valor entregado a los hogares por cada devolución realizada.</span>
           </div>
         </div>
       </div>
@@ -370,24 +386,32 @@
 
         <div class="value-prop__grid">
           <article class="value-card" data-reveal>
-            <span class="value-card__icon" aria-hidden="true">♻️</span>
-            <h3>Economía circular</h3>
-            <p>Un modelo probado que sustituye el ciclo lineal por reutilización continua.</p>
+            <span class="value-card__icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M3 10a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1a2 2 0 0 0 0 4v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 0 0-4v-1Z" stroke="#2F80ED" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Ahorro real</h3>
+            <p>Descuento inmediato por cada envase devuelto, sin cambiar de marca ni de supermercado.</p>
           </article>
           <article class="value-card" data-reveal>
-            <span class="value-card__icon" aria-hidden="true">🏆</span>
-            <h3>Recompensas</h3>
-            <p>Puntos, descuentos y beneficios que incentivan la devolución constante.</p>
+            <span class="value-card__icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#55C44D" stroke-width="1.7"/><path d="M8 7V5a4 4 0 0 1 8 0v2" stroke="#55C44D" stroke-width="1.7"/></svg>
+            </span>
+            <h3>Servicio integral para marcas</h3>
+            <p>Gestionamos la recolección, sanitización y trazabilidad del envase, sin que el fabricante invierta en infraestructura propia.</p>
           </article>
           <article class="value-card" data-reveal>
-            <span class="value-card__icon" aria-hidden="true">🤖</span>
-            <h3>Tecnología inteligente</h3>
-            <p>Estaciones RVM que identifican, clasifican y registran cada envase al instante.</p>
+            <span class="value-card__icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="7" height="7" rx="1.3" stroke="#2F80ED" stroke-width="1.7"/><rect x="13" y="4" width="7" height="7" rx="1.3" stroke="#2F80ED" stroke-width="1.7"/><rect x="4" y="13" width="7" height="7" rx="1.3" stroke="#2F80ED" stroke-width="1.7"/><path d="M15.5 16.5h4M17.5 14.5v4" stroke="#2F80ED" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Trazabilidad y certificación</h3>
+            <p>Cada envase lleva un código único que permite certificar cuántas veces se ha reutilizado y sanitizado.</p>
           </article>
           <article class="value-card" data-reveal>
-            <span class="value-card__icon" aria-hidden="true">🚚</span>
+            <span class="value-card__icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M3 16V6a1 1 0 0 1 1-1h9v11" stroke="#55C44D" stroke-width="1.7" stroke-linejoin="round"/><path d="M13 9h4l3 3v4h-2" stroke="#55C44D" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.8" stroke="#55C44D" stroke-width="1.7"/><circle cx="16.5" cy="17" r="1.8" stroke="#55C44D" stroke-width="1.7"/></svg>
+            </span>
             <h3>Logística inversa</h3>
-            <p>Una red de recolección, lavado y redistribución optimizada de punta a punta.</p>
+            <p>Una red que recolecta los envases en el supermercado y los devuelve sanitizados a cada fábrica aliada.</p>
           </article>
         </div>
       </div>
@@ -404,7 +428,7 @@
           <p class="lead">Un mismo circuito, en constante movimiento.</p>
         </div>
 
-        <div class="cycle__diagram" data-reveal role="img" aria-label="Diagrama circular: Fabricantes envían productos a Supermercados, Supermercados a Consumidores, Consumidores devuelven envases a Máquinas ECOLoop, las máquinas los envían a Centro de lavado, y el Centro de lavado regresa los envases limpios a Fabricantes, cerrando el ciclo.">
+        <div class="cycle__diagram" data-reveal role="img" aria-label="Diagrama circular: los fabricantes envían productos a los supermercados, los supermercados a los hogares, los hogares devuelven envases en las estaciones RVM, las estaciones los envían a la planta de sanitización, y la planta regresa los envases limpios a los fabricantes, cerrando el ciclo.">
           <svg viewBox="0 0 600 600" class="cycle__svg" aria-hidden="true">
             <defs>
               <linearGradient id="cycleGrad" x1="0" y1="0" x2="1" y2="1">
@@ -417,24 +441,34 @@
           </svg>
 
           <div class="cycle__node" style="--pos: 0;">
-            <span class="cycle__icon" aria-hidden="true">🏭</span>
+            <span class="cycle__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 21V9l6-4 6 4v12" stroke="#2F80ED" stroke-width="1.7" stroke-linejoin="round"/><path d="M15 13l6-3v11h-6" stroke="#2F80ED" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 13h2M8 17h2" stroke="#2F80ED" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
             <strong>Fabricantes</strong>
           </div>
           <div class="cycle__node" style="--pos: 1;">
-            <span class="cycle__icon" aria-hidden="true">🏬</span>
+            <span class="cycle__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 21V10l8-6 8 6v11" stroke="#55C44D" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="#55C44D" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
             <strong>Supermercados</strong>
           </div>
           <div class="cycle__node" style="--pos: 2;">
-            <span class="cycle__icon" aria-hidden="true">🧑‍🤝‍🧑</span>
-            <strong>Consumidores</strong>
+            <span class="cycle__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="#2F80ED" stroke-width="1.7"/><path d="M5 20a7 7 0 0 1 14 0" stroke="#2F80ED" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <strong>Hogares</strong>
           </div>
           <div class="cycle__node" style="--pos: 3;">
-            <span class="cycle__icon" aria-hidden="true">📍</span>
-            <strong>Máquinas ECOLoop</strong>
+            <span class="cycle__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="18" rx="2" stroke="#55C44D" stroke-width="1.7"/><rect x="8.5" y="6" width="7" height="5" rx="0.8" stroke="#55C44D" stroke-width="1.4"/><circle cx="9.5" cy="16" r="0.9" fill="#55C44D"/></svg>
+            </span>
+            <strong>Estaciones RVM</strong>
           </div>
           <div class="cycle__node" style="--pos: 4;">
-            <span class="cycle__icon" aria-hidden="true">🧼</span>
-            <strong>Centro de lavado</strong>
+            <span class="cycle__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 3h16M6 3v3.5L4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7l-2-5.5V3" stroke="#2F80ED" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <strong>Planta de sanitización</strong>
           </div>
 
           <div class="cycle__center">
@@ -450,34 +484,34 @@
     <section class="section stations" id="estaciones" aria-labelledby="stations-title">
       <div class="container stations__grid">
         <div class="stations__content" data-reveal>
-          <p class="eyebrow">Cobertura</p>
-          <h2 id="stations-title">Encuentra tu estación ECOLoop</h2>
-          <p class="lead">Estamos presentes en las principales ciudades de Colombia, con nuevas estaciones abriendo cada mes.</p>
+          <p class="eyebrow">Dónde estamos</p>
+          <h2 id="stations-title">Iniciamos en el Valle de Aburrá</h2>
+          <p class="lead">Nuestra primera red de estaciones inteligentes se despliega en supermercados e hipermercados aliados del Valle de Aburrá, con un plan de expansión hacia otras regiones de Colombia.</p>
 
-          <form class="station-search" role="search" aria-label="Buscador de estaciones ECOLoop">
-            <label for="station-input" class="visually-hidden">Buscar por ciudad o barrio</label>
+          <form class="station-search" aria-label="Formulario de notificación de estaciones ECOLoop">
+            <label for="station-input" class="visually-hidden">Tu ciudad o barrio</label>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="#2D3436" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="#2D3436" stroke-width="2" stroke-linecap="round"/></svg>
-            <input type="search" id="station-input" name="station-input" placeholder="Busca tu ciudad o barrio...">
-            <button type="submit" class="btn btn--primary btn--sm">Buscar</button>
+            <input type="text" id="station-input" name="station-input" placeholder="Escribe tu ciudad o barrio..." required>
+            <button type="submit" class="btn btn--primary btn--sm">Notificarme</button>
           </form>
 
           <ul class="stations__list">
-            <li><strong>Bogotá</strong><span>18 estaciones</span></li>
-            <li><strong>Medellín</strong><span>9 estaciones</span></li>
-            <li><strong>Cali</strong><span>6 estaciones</span></li>
-            <li><strong>Barranquilla</strong><span>4 estaciones</span></li>
+            <li><strong>Fase 1</strong><span>Valle de Aburrá</span></li>
+            <li><strong>Fase 2</strong><span>Bogotá y área metropolitana</span></li>
+            <li><strong>Visión 2036</strong><span>Colombia, México y Panamá</span></li>
           </ul>
         </div>
 
         <div class="stations__map" data-reveal>
-          <svg viewBox="0 0 400 520" role="img" aria-label="Mapa estilizado de Colombia con puntos que representan estaciones ECOLoop">
+          <svg viewBox="0 0 400 520" role="img" aria-label="Mapa estilizado de Colombia con puntos que representan la expansión planeada de estaciones ECOLoop">
             <path d="M120 20 L200 10 L260 40 L290 90 L320 120 L310 170 L340 210 L330 260 L300 300 L310 350 L280 400 L250 460 L210 500 L170 470 L150 420 L110 400 L90 350 L60 320 L70 260 L50 210 L80 170 L70 120 L100 80 Z" fill="#EAF4EC" stroke="#c7ddcb" stroke-width="2"/>
             <circle class="ping" cx="180" cy="140" r="7" fill="#55C44D"/>
             <circle class="ping" cx="150" cy="240" r="7" fill="#2F80ED"/>
-            <circle class="ping" cx="200" cy="330" r="7" fill="#55C44D"/>
-            <circle class="ping" cx="120" cy="360" r="7" fill="#2F80ED"/>
-            <circle class="ping" cx="230" cy="410" r="7" fill="#55C44D"/>
+            <circle cx="200" cy="330" r="7" fill="#c7ddcb"/>
+            <circle cx="120" cy="360" r="7" fill="#c7ddcb"/>
+            <circle cx="230" cy="410" r="7" fill="#c7ddcb"/>
           </svg>
+          <p class="stations__map-caption">Mapa ilustrativo. Los puntos activos marcan el Valle de Aburrá; el resto representa la expansión planeada.</p>
         </div>
       </div>
     </section>
@@ -501,55 +535,67 @@
               </button>
             </h3>
             <div class="accordion__panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
-              <p>Todos los productos ECOLoop llevan un sello distintivo en el empaque y un código identificable por las estaciones inteligentes, disponibles en los supermercados aliados.</p>
+              <p>Los productos que participan en el sistema se distribuyen en envases retornables de PEAD (Polietileno de Alta Densidad), identificados con un código único y una faja de cartón biodegradable en lugar de etiqueta plástica.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <h3>
               <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
-                ¿Qué recompensas puedo recibir?
+                ¿Qué recibo al devolver un envase?
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="accordion__panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
-              <p>Puedes acumular puntos canjeables por descuentos, productos gratuitos o beneficios exclusivos con nuestros supermercados y marcas aliadas.</p>
+              <p>Recibes un ticket de descuento aplicable a la compra de ese mismo producto y marca, que redimes directamente en la caja del supermercado donde hiciste la devolución.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <h3>
               <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
-                ¿Cuántas veces se puede reutilizar un envase?
+                ¿Debo devolver el envase en el mismo supermercado donde lo compré?
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="accordion__panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
-              <p>En promedio, un envase ECOLoop puede completar entre 10 y 15 ciclos de reutilización antes de ser reciclado de forma responsable.</p>
+              <p>Sí. La devolución debe hacerse en una estación de la misma cadena donde compraste el producto, ya que el descuento está vinculado a la marca propia de ese comercio.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <h3>
               <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
-                ¿ECOLoop tiene algún costo para el consumidor?
+                ¿Cuántas veces se puede reutilizar un envase?
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="accordion__panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
-              <p>No. Devolver el envase es gratuito y, además, genera recompensas. El único requisito es hacerlo en una estación ECOLoop autorizada.</p>
+              <p>Los envases de PEAD están diseñados para soportar decenas de ciclos de lavado y reutilización antes de destinarse a reciclaje tradicional.</p>
             </div>
           </div>
 
           <div class="accordion__item">
             <h3>
               <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
-                ¿Cómo puede mi empresa unirse como fabricante o supermercado aliado?
+                ¿ECOLoop tiene algún costo para el consumidor?
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </h3>
             <div class="accordion__panel" id="faq-5" role="region" aria-labelledby="faq-5-btn" hidden>
-              <p>Escríbenos a través del formulario de contacto y nuestro equipo comercial evaluará la mejor forma de integrar tu operación a la red ECOLoop.</p>
+              <p>No. Devolver el envase es gratuito y, además, genera un descuento. El único requisito es hacerlo en una estación ECOLoop de la cadena donde compraste el producto.</p>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <h3>
+              <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">
+                ¿Cómo puede mi marca o supermercado unirse a ECOLoop?
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-6" role="region" aria-labelledby="faq-6-btn" hidden>
+              <p>Escríbenos por el formulario de contacto. A las marcas les ofrecemos un servicio de outsourcing de gestión y sanitización de envases; con los supermercados evaluamos juntos la instalación de una estación inteligente.</p>
             </div>
           </div>
         </div>
@@ -573,11 +619,11 @@
             </li>
             <li>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2.2z" stroke="#2F80ED" stroke-width="1.6"/></svg>
-              <a href="tel:+576014567890">+57 601 456 7890</a>
+              <a href="tel:+576044445566">+57 604 444 5566</a>
             </li>
             <li>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z" stroke="#2F80ED" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#2F80ED" stroke-width="1.6"/></svg>
-              <span>Bogotá, Colombia</span>
+              <span>Medellín, Valle de Aburrá, Colombia</span>
             </li>
           </ul>
 
@@ -625,19 +671,7 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <a href="#inicio" class="navbar__logo" aria-label="ECOLoop, ir al inicio">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 40 40" width="32" height="32">
-              <circle cx="20" cy="20" r="19" fill="url(#logoGradFooter)"/>
-              <path d="M11 20a9 9 0 0 1 15.5-6.2M29 20a9 9 0 0 1-15.5 6.2" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-              <defs>
-                <linearGradient id="logoGradFooter" x1="0" y1="0" x2="40" y2="40">
-                  <stop offset="0" stop-color="#55C44D"/>
-                  <stop offset="1" stop-color="#2F80ED"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span class="logo-text">ECO<span class="logo-text--accent">Loop</span></span>
+          <img src="assets/logo-ecoloop.png" alt="ECOLoop" class="logo-img logo-img--footer" width="140" height="34">
         </a>
         <p>El ciclo que transforma la industria del aseo. Envases reutilizables, tecnología inteligente y un planeta con menos residuos.</p>
       </div>
